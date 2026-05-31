@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Información y Contacto</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">La Literatura Barroca</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="contact-wrapper">
+            <section class="characters-section">
+                <h2>¡Bienvenido!</h2>
+                <p>Nos encantaría escucharte. Si tienes preguntas, sugerencias o simplemente quieres saludar, completa el formulario al lado y nos pondremos en contacto lo antes posible. Tu opinión es muy importante para nosotros.</p>
+            </section>
+
+            <section class="contact-form-section">
+                <div class="contact-card">
+                    <h2>Contacto</h2>
+                    <form id="contactForm">
+                        <input type="text" id="nombre" placeholder="Nombre" required>
+                        <input type="email" id="email" placeholder="Correo electrónico" required>
+                        <textarea id="mensaje" placeholder="Mensaje" required rows="5"></textarea>
+                        <button type="submit">Enviar</button>
+                    </form>
+                </div>
+            </section>
+        </div>
+
+        <div class="confirmation-modal" id="confirmationModal">
+            <div class="confirmation-content">
+                <div class="checkmark">✓</div>
+                <h3>¡Enviado!</h3>
+                <p>Tu mensaje ha sido recibido exitosamente. Nos pondremos en contacto pronto.</p>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        // Manejar envío del formulario
+        document.getElementById('contactForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const modal = document.getElementById('confirmationModal');
+            modal.classList.add('show');
+
+            // Limpiar formulario
+            this.reset();
+
+            // Redirigir después de 3 segundos
+            setTimeout(() => {
+                window.location.href = 'index.html';
+            }, 3000);
+        });
+
+        // Activar animación de carga
+        window.addEventListener('load', () => {
+            document.body.classList.add('site-loaded');
+        });
+    </script>
+</body>
+</html>

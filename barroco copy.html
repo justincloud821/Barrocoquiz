@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es-ES">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Barroco Copy</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
+    <style>
+        .detalle-barroco {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            gap: 30px;
+            max-width: 1100px;
+            margin: 40px auto;
+            padding: 20px;
+        }
+        .detalle-barroco img {
+            width: 100%;
+            max-width: 480px;
+            border-radius: 12px;
+            object-fit: cover;
+            box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        }
+        .detalle-barroco.reverse {
+            flex-direction: row-reverse;
+        }
+        .detalle-contenido {
+            flex: 1;
+            min-width: 280px;
+        }
+        .detalle-contenido h1,
+        .detalle-contenido h4 {
+            margin: 0 0 18px;
+            font-family: 'Playfair Display', serif;
+        }
+        .detalle-contenido h1 {
+            font-size: 2.8rem;
+            line-height: 1.1;
+        }
+        .detalle-contenido p {
+            color: #333;
+            line-height: 1.7;
+            margin-bottom: 18px;
+            font-size: 1rem;
+        }
+        .detalle-contenido .cta-buton {
+            display: inline-block;
+        }
+        @media (max-width: 860px) {
+            .detalle-barroco {
+                flex-direction: column;
+                text-align: center;
+            }
+            .detalle-contenido {
+                width: 100%;
+            }
+            .detalle-barroco img {
+                max-width: 100%;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">¡Bienvenido!</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="index.html#Propiedades">Propiedades</a></li>
+                <li><a href="Informaciony contactos.html">Contacto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="fade-section">
+        <section class="detalle-barroco">
+            <img src="IMGs/barrocaid.jpg" alt="El Barroco">
+            <div class="detalle-contenido">
+                <h1>El Barroco</h1>
+                <h4>Introducción</h4>
+                <p>El Barroco es un movimiento artístico y literario que se caracteriza por su complejidad, sus contrastes y el uso de recursos retóricos cargados de emoción. En literatura, se aprecia la preocupación por la forma, el gusto por lo recargado y la expresión intensa.</p>
+                <button class="cta-buton" onclick="window.location.href='index.html#Propiedades'">Volver</button>
+            </div>
+        </section>
+
+        <section class="detalle-barroco reverse">
+            <img src="IMGs/Barroca2.jpg" alt="Carácter barroco">
+            <div class="detalle-contenido">
+                <h1>Características</h1>
+                <h4>Contraste y ornamentación</h4>
+                <p>El Barroco utiliza contrastes fuertes, ornamentación abundante y metáforas complejas. Esto se traduce en un estilo visual y literario cargado de movimiento y emoción.</p>
+                <button class="cta-buton" onclick="window.location.href='index.html#Propiedades'">Volver</button>
+            </div>
+        </section>
+
+        <section class="detalle-barroco">
+            <img src="IMGs/Barroca3.jpg" alt="Contenido barroco">
+            <div class="detalle-contenido">
+                <h1>Contexto histórico</h1>
+                <h4>Siglos XVII y XVIII</h4>
+                <p>El Barroco floreció en los siglos XVII y XVIII, en un periodo marcado por tensiones políticas y religiosas. La obra barroca refleja estos conflictos mediante recursos dramáticos y un lenguaje expresivo.</p>
+                <button class="cta-buton" onclick="window.location.href='index.html#Propiedades'">Volver</button>
+            </div>
+        </section>
+
+    </main>
+    <script>
+        window.addEventListener('load', () => {
+            document.body.classList.add('site-loaded');
+        });
+    </script>
+</body>
+</html>
